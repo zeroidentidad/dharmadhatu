@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" href="views/css/bootstrap.min.css">
 	<link rel="stylesheet" href="views/css/font-awesome.min.css">
-	<link rel="stylesheet" href="views/css/style.css">
+	<link rel="stylesheet" href="views/css/style.css?v=<?php echo rand(); ?>">
 	<link rel="stylesheet" href="views/css/fonts.css">
     <link rel="stylesheet" href="views/css/dataTables.bootstrap.min.css">
 	<link rel="stylesheet" href="views/css/responsive.bootstrap.min.css">
@@ -54,8 +54,9 @@
 	
 	</div>
 
-	<script src="views/js/script.js"></script>
-	<script src="views/js/validarIngreso.js"></script>
+	<script src="views/js/script.js?v=<?php echo rand(); ?>"></script>
+	<script src="views/js/validarIngreso.js?v=<?php echo rand(); ?>"></script>
+	<script src="views/js/gestorSlide.js?v=<?php echo rand(); ?>"></script>
 	
 </body>
 

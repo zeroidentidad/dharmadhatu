@@ -3,16 +3,12 @@
 session_start();
 
 if(!$_SESSION["validar"]){
-
 	header("location:ingreso");
-
 	exit();
-
 }
 
 include "views/modules/botonera.php";
 include "views/modules/cabezote.php";
-
 ?>
 <!--=====================================
 SLIDE ADMINISTRABLE          
@@ -21,38 +17,15 @@ SLIDE ADMINISTRABLE
 
 <hr>
 
-<p><span class="fa fa-arrow-down"></span>  Arrastra aquí tu imagen, tamaño recomendado: 1600px * 600px</p>
+<p><span class="fa fa-arrow-down"></span>  Arrastra aquí tu imagen, tamaño recomendado: 1600px * 600px (peso recomendado 2MB)</p>
 	
 	<ul id="columnasSlide">
-		<li class="bloqueSlide">
-			<span class="fa fa-times"></span>
-			<img src="views/images/slide/slide01.jpg" class="handleImg">
-		</li>
-			
-		<li class="bloqueSlide">
-			<span class="fa fa-times"></span>
-			<img src="views/images/slide/slide02.jpg" class="handleImg">			
-		</li>
 
-		<li class="bloqueSlide">
-			<span class="fa fa-times"></span>
-			<img src="views/images/slide/slide03.jpg" class="handleImg">			
-		</li>
+	<?php
+	$slide = new GestorSlide();
+	$slide -> mostrarImagenVistaController();
+	?>
 
-		<li class="bloqueSlide">
-			<span class="fa fa-times"></span>
-			<img src="views/images/slide/slide04.jpg" class="handleImg">
-		</li>
-			
-		<li class="bloqueSlide">
-			<span class="fa fa-times"></span>
-			<img src="views/images/slide/slide01.jpg" class="handleImg">			
-		</li>
-
-		<li class="bloqueSlide">
-			<span class="fa fa-times"></span>
-			<img src="views/images/slide/slide02.jpg" class="handleImg">			
-		</li>
 	</ul>
 
 	<button id="ordenarSlide" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar Slides</button>
@@ -68,54 +41,18 @@ SLIDE ADMINISTRABLE
 <hr>
 	
 	<ul id="ordenarTextSlide">
-		<li>
-			<span class="fa fa-pencil" style="background:blue"></span>
-			<img src="views/images/slide/slide01.jpg" style="float:left; margin-bottom:10px" width="80%">
-			<h1>Lorem Ipsum</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</li>
 
-		<li>
-			<img src="views/images/slide/slide02.jpg" class="img-thumbnail">
-			<input type="text" class="form-control" placeholder="Título">
-			<textarea row="5" class="form-control" placeholder="Descripción"></textarea>
-			<button class="btn btn-info pull-right" style="margin:10px">Guardar</button>
-		</li>
-
-		<li>
-			<img src="views/images/slide/slide03.jpg" class="img-thumbnail">
-			<input type="text" class="form-control" placeholder="Título">
-			<textarea row="5" class="form-control" placeholder="Descripción"></textarea>
-			<button class="btn btn-info pull-right" style="margin:10px">Guardar</button>
-		</li>
-
-		<li>
-			<span class="fa fa-pencil" style="background:blue"></span>
-			<img src="views/images/slide/slide04.jpg" style="float:left; margin-bottom:10px" width="80%">
-			<h1>Lorem Ipsum</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		</li>
-
-		<li>
-			<img src="views/images/slide/slide01.jpg" class="img-thumbnail">
-			<input type="text" class="form-control" placeholder="Título">
-			<textarea row="5" class="form-control" placeholder="Descripción"></textarea>
-			<button class="btn btn-info pull-right" style="margin:10px">Guardar</button>
-		</li>
-
-		<li>
-			<img src="views/images/slide/slide02.jpg" class="img-thumbnail">
-			<input type="text" class="form-control" placeholder="Título">
-			<textarea row="5" class="form-control" placeholder="Descripción"></textarea>
-			<button class="btn btn-info pull-right" style="margin:10px">Guardar</button>
-		</li>
+	<?php
+	$slide = new GestorSlide();
+	$slide -> editorSlideController();
+	?>
 
 	</ul>
 </div>
 
 <!--===============================================-->
 
-<div id="slide" class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
+<!--<div id="slide" class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
 	
 	<hr>
 	
@@ -164,6 +101,6 @@ SLIDE ADMINISTRABLE
 	<div id="slideIzq"><span class="fa fa-chevron-left"></span></div>
 	<div id="slideDer"><span class="fa fa-chevron-right"></span></div>
 
-</div>
+</div>-->
 
 <!--====  Fin de SLIDE ADMINISTRABLE  ====-->

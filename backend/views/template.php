@@ -28,7 +28,6 @@
 	<script src="views/js/responsive.bootstrap.min.js"></script>
 	<script src="views/js/jquery-ui.min.js"></script>
 	<script src="views/js/sweetalert.min.js"></script>
-
 </head>
 
 <body>
@@ -40,14 +39,10 @@
 		<!--=====================================
 		COLUMNA CONTENIDO        
 		======================================-->	
-			
 		<?php
-
 			$modulos = new Enlaces();
 			$modulos->enlacesController();
-		
 		?>
-
 		<!--====  Fin de COLUMNA CONTENIDO  ====-->
 
 		</section>

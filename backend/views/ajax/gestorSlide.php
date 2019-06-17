@@ -6,12 +6,10 @@ require_once "../../controllers/gestorSlide.php";
 /* Aqui se reciben las peticiones Ajax de JS con jQuery*/
 #CLASE Y MÉTODOS
 #-------------------------------------------------------------
-
 class Ajax{
 
 	#SUBIR LA IMAGEN DEL SLIDE
 	#----------------------------------------------------------
-
 	public $nombreImagen;
 	public $imagenTemporal;
 
@@ -62,7 +60,6 @@ class Ajax{
 
 	#ACTUALIZAR ORDEN
 	#---------------------------------------------
-	
 	public $actualizarOrdenSlide;
 	public $actualizarOrdenItem;
 
@@ -82,34 +79,30 @@ class Ajax{
 #OBJETOS DE LA IMAGEN
 #-----------------------------------------------------------
 if(isset($_FILES["imagen"]["name"])){
-
-	$a = new Ajax();
-	$a -> nombreImagen = $_FILES["imagen"]["name"];
-	$a -> imagenTemporal = $_FILES["imagen"]["tmp_name"];
-	$a -> gestorSlideAjax();
+	$subir = new Ajax();
+	$subir -> nombreImagen = $_FILES["imagen"]["name"];
+	$subir -> imagenTemporal = $_FILES["imagen"]["tmp_name"];
+	$subir -> gestorSlideAjax();
 }
 
 if(isset($_POST["idSlide"])){
-
-	$b = new Ajax();
-	$b -> idSlide = $_POST["idSlide"];
-	$b -> rutaSlide = $_POST["rutaSlide"];
-	$b -> eliminarSlideAjax();	
+	$borrar = new Ajax();
+	$borrar -> idSlide = $_POST["idSlide"];
+	$borrar -> rutaSlide = $_POST["rutaSlide"];
+	$borrar -> eliminarSlideAjax();	
 }
 
 if(isset($_POST["enviarId"])){
-
-	$c = new Ajax();
-	$c -> enviarId = $_POST["enviarId"];
-	$c -> enviarTitulo = $_POST["enviarTitulo"];
-	$c -> enviarDescripcion = $_POST["enviarDescripcion"];
-	$c -> actualizarSlideAjax();	
+	$actualizar = new Ajax();
+	$actualizar -> enviarId = $_POST["enviarId"];
+	$actualizar -> enviarTitulo = $_POST["enviarTitulo"];
+	$actualizar -> enviarDescripcion = $_POST["enviarDescripcion"];
+	$actualizar -> actualizarSlideAjax();	
 }
 
 if(isset($_POST["actualizarOrdenSlide"])){
-
-	$d = new Ajax();
-	$d -> actualizarOrdenSlide = $_POST["actualizarOrdenSlide"];
-	$d -> actualizarOrdenItem = $_POST["actualizarOrdenItem"];
-	$d -> actualizarOrdenAjax();
+	$actualizarOrd = new Ajax();
+	$actualizarOrd -> actualizarOrdenSlide = $_POST["actualizarOrdenSlide"];
+	$actualizarOrd -> actualizarOrdenItem = $_POST["actualizarOrdenItem"];
+	$actualizarOrd -> actualizarOrdenAjax();
 }

@@ -84,12 +84,12 @@ $("#columnasSlide").on("drop", function (e) {
                     $("#ordenarTextSlide").append('<li><span class="fa fa-pencil" style="background:blue"></span><img src="' + respuesta["ruta"].slice(6) + '" style="float:left; margin-bottom:10px" width="80%"><h1>' + respuesta["titulo"] + '</h1><p>' + respuesta["descripcion"] + '</p></li>');
 
                     swal({
-                        title: "¡OK!",
-                        text: "¡La imagen se subió correctamente!",
+                        title: "Éxito",
+                        text: "¡La imagen subió correctamente!",
                         type: "success",
                         confirmButtonText: "Cerrar",
                         closeOnConfirm: false
-                    },
+                        },
                         function (isConfirm) {
                             if (isConfirm) {
                                 window.location = "slide";
@@ -110,13 +110,10 @@ $("#columnasSlide").on("drop", function (e) {
 /*=============================================
 Eliminar Item Slide
 =============================================*/
-
 $(".eliminarSlide").click(function () {
 
     if ($(".eliminarSlide").length == 1) {
-
         $("#columnasSlide").css({ "height": "100px" });
-
     }
 
     idSlide = $(this).parent().attr("id");
@@ -131,7 +128,6 @@ $(".eliminarSlide").click(function () {
     borrarItem.append("rutaSlide", rutaSlide);
 
     $.ajax({
-
         url: "views/ajax/gestorSlide.php",
         method: "POST",
         data: borrarItem,
@@ -139,20 +135,15 @@ $(".eliminarSlide").click(function () {
         contentType: false,
         processData: false,
         success: function (respuesta) {
-
         }
-
     })
 
 })
-
-
 /*=====  Eliminar Item Slide  ======*/
 
 /*=============================================
 Editar Item Slide
 =============================================*/
-
 $(".editarSlide").click(function () {
 
     idSlide = $(this).parent().attr("id");
@@ -188,8 +179,8 @@ $(".editarSlide").click(function () {
                 $("#guardar" + idSlide).parent().html('<span class="fa fa-pencil editarSlide" style="background:blue"></span><img src="' + rutaImagen + '" style="float:left; margin-bottom:10px" width="80%"><h1>' + respuesta["titulo"] + '</h1><p>' + respuesta["descripcion"] + '</p>');
 
                 swal({
-                    title: "¡OK!",
-                    text: "¡Se han guardado los cambios correctamente!",
+                    title: "Listo!",
+                    text: "¡Se han guardado cambios correctamente!",
                     type: "success",
                     confirmButtonText: "Cerrar",
                     closeOnConfirm: false
@@ -204,18 +195,14 @@ $(".editarSlide").click(function () {
 
         });
 
-
-
     })
 
 })
-
 /*=====  Editar  Item Slide  ======*/
 
 /*=============================================
 Ordenar Item Slide
 =============================================*/
-
 var almacenarOrdenId = new Array();
 var ordenItem = new Array();
 
@@ -237,7 +224,6 @@ $("#ordenarSlide").click(function () {
 
                 almacenarOrdenId[i] = event.target.children[i].id;
                 ordenItem[i] = i + 1;
-
             }
 
         }
@@ -270,8 +256,8 @@ $("#guardarSlide").click(function () {
                 $("#textoSlide ul").html(respuesta);
 
                 swal({
-                    title: "¡OK!",
-                    text: "¡El orden se ha actualizado correctamente!",
+                    title: "Listo!",
+                    text: "¡Orden actualizado correctamente!",
                     type: "success",
                     confirmButtonText: "Cerrar",
                     closeOnConfirm: false
@@ -281,9 +267,6 @@ $("#guardarSlide").click(function () {
                             window.location = "slide";
                         }
                     });
-
-
-
             }
 
         })
@@ -291,5 +274,4 @@ $("#guardarSlide").click(function () {
     }
 
 })
-
 /*=====  Ordenar Item Slide  ======*/

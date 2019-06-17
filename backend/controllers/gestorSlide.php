@@ -22,7 +22,8 @@ class GestorSlide {
 
 			#imagecreatefromjpeg — Crea una nueva imagen a partir de un fichero o de una URL
 
-			$origen = imagecreatefromjpeg($datos["imagenTemporal"]);
+			//$origen = imagecreatefromjpeg($datos["imagenTemporal"]);
+			$origen = $this->getImage($datos["imagenTemporal"]);
 
 			#imagecrop() — Recorta una imagen usando las coordenadas, el tamaño, x, y, ancho y alto dados
 
@@ -49,6 +50,22 @@ class GestorSlide {
 		}
 
 	}
+
+	function getImage($path) {
+		switch(mime_content_type($path)) {
+		case 'image/png':
+			$img = imagecreatefrompng($path);
+			break;
+		case 'image/jpeg':
+			$img = imagecreatefromjpeg($path);
+			break;
+		/*case 'image/bmp': $img = imagecreatefrombmp($path); break;
+		case 'image/gif': $img = imagecreatefromgif($path); break;*/	
+		default:
+			$img = null; 
+		}
+		return $img;
+	}	
 
 	#MOSTRAR IMAGENES EN LA VISTA
 	#------------------------------------------------------------

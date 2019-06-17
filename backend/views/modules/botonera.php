@@ -45,7 +45,9 @@ COLUMNA BOTONERA
 			</ul>
 
 		</nav>
-
+		<div class="text-center">
+		<a href="../index.php" target="_blank"><button type="button" class="btn btn-primary">Ver sitio</button></a>
+		</div>
 	</div>
 
 <!--====  FIn de COLUMNA BOTONERA  ====-->

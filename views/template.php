@@ -3,12 +3,10 @@
 <head>
 	<meta charset="UTF-8">
 	<title>DHARMADHATU</title>
-
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
 	<link rel="icon" href="views/images/icono.png">
 
-	<link rel="stylesheet" href="views/css/style.css">
+	<link rel="stylesheet" href="views/css/style.css?v=<?php echo rand(); ?>">
 	<link rel="stylesheet" href="views/css/bootstrap.min.css">
 	<link rel="stylesheet" href="views/css/font-awesome.min.css">
 	<link rel="stylesheet" href="views/css/fonts.css">
@@ -29,73 +27,54 @@
 		<!--=====================================
 		SLIDE
 		======================================-->
-		
 		<?php include "modules/slide.php"; ?>
-
 		<!--====  Fin de SLIDE  ====-->	
 
 		<!--=====================================
 		CABECERA
 		======================================-->
-		
 		<?php include "modules/cabezote.php"; ?>
-		
 		<!--====  Fin de CABECERA  ====-->
 
 		<!--=====================================
 		TOP
 		======================================-->
-
 		<?php include "modules/top.php"; ?>
-		
 		<!--====  Fin de TOP  ====-->
 
 		<!--=====================================
 		GALERIA
 		======================================-->
-
 		<?php include "modules/galeria.php"; ?>
-
 		<!--====  Fin de GALERIA  ====-->
 
 		<!--=====================================
 		ARTÍCULOS
 		======================================-->
-
 		<?php include "modules/articulos.php"; ?>
-
 		<!--====  Fin de ARTÍCULOS  ====-->
 
 		<!--=====================================
 		VIDEOS
 		======================================-->
-
 		<?php include "modules/videos.php"; ?>
-
 		<!--====  Fin de VIDEOS  ====-->
 
 		<!--=====================================
 			CONTACTO         
 		======================================-->
-
 		<?php include "modules/contactenos.php"; ?>
-		
 		<!--====  Fin de CONTACTO ====-->
 
 		<!--=====================================
 			ARTÍCULO MODAL         
 		======================================-->
-
 		<?php include "modules/articuloModal.php"; ?>	
-
     	<!--====  Fin de ARTICULO MODAL ====-->
 		
 	</div>
 
-
-
-
-<script src="views/js/script.js"></script>
+<script src="views/js/script.js?v=<?php echo rand(); ?>"></script>
 
 </body>
 </html>

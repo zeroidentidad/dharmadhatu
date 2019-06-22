@@ -28,9 +28,9 @@ SLIDE ADMINISTRABLE
 
 	</ul>
 
-	<button id="ordenarSlide" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar Slides</button>
+	<button id="ordenarSlide" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar</button>
 
-	<button id="guardarSlide" class="btn btn-primary pull-right" style="display:none; margin:10px 30px">Guardar Orden Slides</button>
+	<button id="guardarSlide" class="btn btn-primary pull-right" style="display:none; margin:10px 30px">Guardar Orden</button>
 
 </div>
 

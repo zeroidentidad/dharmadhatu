@@ -45,7 +45,7 @@
 		<!--=====================================
 		GALERIA
 		======================================-->
-		<?php include "modules/galeria.php"; ?>
+		<?php //include "modules/galeria.php"; ?>
 		<!--====  Fin de GALERIA  ====-->
 
 		<!--=====================================
@@ -57,7 +57,7 @@
 		<!--=====================================
 		VIDEOS
 		======================================-->
-		<?php include "modules/videos.php"; ?>
+		<?php //include "modules/videos.php"; ?>
 		<!--====  Fin de VIDEOS  ====-->
 
 		<!--=====================================
@@ -65,12 +65,6 @@
 		======================================-->
 		<?php include "modules/contactenos.php"; ?>
 		<!--====  Fin de CONTACTO ====-->
-
-		<!--=====================================
-			ARTÍCULO MODAL         
-		======================================-->
-		<?php include "modules/articuloModal.php"; ?>	
-    	<!--====  Fin de ARTICULO MODAL ====-->
 		
 	</div>
 

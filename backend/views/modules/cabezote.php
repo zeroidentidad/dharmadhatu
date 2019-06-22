@@ -7,30 +7,26 @@
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
 		
 		<ul>
-			<li  style="background: #333">
+			<li style="background: #333">
 				<a href="mensajes.html" style="color: #fff">
       			<i class="fa fa-envelope"></i> 
-      			<span>1</span> 
+      			<!--<span>0</span>--> 
     			</a>
 			</li>
 
 			<li  style="background: #333">
 				<a href="suscriptores.html" style="color: #fff">
       			<i class="fa fa-bell"></i>  
-      			<span>1</span>
+      			<!--<span>0</span>--> 
     			</a>
-			</li>
-			
+			</li>			
 		</ul>
 
 	</div>
 
 	<div id="time" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-		
-
 		<div class="text-center">Lunes, 12 de Enero de 2019</div>
 		<div class="text-center">12:56:00 pm</div>
-
 	</div>
 
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
@@ -43,7 +39,6 @@
 				<li><a href="perfil.html"><span class="fa fa-user"></span>Editar Perfil</a></li>
 				<li><a href="salir"><span class="fa fa-times"></span>Salir</a></li>
 			</ol>
-
 		</p>
 
 	</div>

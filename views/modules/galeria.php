@@ -7,64 +7,12 @@
 	<hr>
 
 	<ul>
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo01.jpg">
-				<img src="views/images/galeria/photo01.jpg">
-				</a>
-			</li>
+		<?php
 
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo02.jpg">
-				<img src="views/images/galeria/photo02.jpg">
-				</a>
-			</li>
-
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo03.jpg">
-				<img src="views/images/galeria/photo03.jpg">
-				</a>
-			</li>
-
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo04.jpg">
-				<img src="views/images/galeria/photo04.jpg">
-				</a>
-			</li>
-
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo01.jpg">
-				<img src="views/images/galeria/photo01.jpg">
-				</a>
-			</li>
-
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo02.jpg">
-				<img src="views/images/galeria/photo02.jpg">
-				</a>
-			</li>
-
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo03.jpg">
-				<img src="views/images/galeria/photo03.jpg">
-				</a>
-			</li>
-
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo04.jpg">
-				<img src="views/images/galeria/photo04.jpg">
-				</a>
-			</li>
-
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo01.jpg">
-				<img src="views/images/galeria/photo01.jpg">
-				</a>
-			</li>
-			<li>
-				<a rel="grupo" href="views/images/galeria/photo02.jpg">
-				<img src="views/images/galeria/photo02.jpg">
-				</a>
-			</li>
+			$galeria = new Galeria();
+			$galeria -> seleccionarGaleriaController();
+			
+		?>
 	</ul>
 
 </div>

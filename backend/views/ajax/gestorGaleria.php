@@ -32,7 +32,8 @@ class Ajax{
 		$datos = array("idGaleria" => $this->idGaleria, 
 					   "rutaGaleria" => $this->rutaGaleria);
 
-		$respuesta = GestorGaleria::eliminarGaleriaController($datos);
+		$obj = new GestorGaleria();
+		$respuesta = $obj->eliminarGaleriaController($datos);
 
 		echo $respuesta;
 	}
@@ -47,7 +48,8 @@ class Ajax{
 		$datos = array("ordenGaleria" => $this->actualizarOrdenGaleria,
 			           "ordenItem" => $this->actualizarOrdenItem);
 
-		$respuesta = GestorGaleria::actualizarOrdenController($datos);
+		$obj = new GestorGaleria();
+		$respuesta = $obj->actualizarOrdenController($datos);
 
 		echo $respuesta;
 	}

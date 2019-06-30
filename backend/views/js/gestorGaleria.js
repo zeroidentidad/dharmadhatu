@@ -116,13 +116,9 @@ $("#lightbox").on("drop", function (e) {
 /*=============================================
 Eliminar Item Galería
 =============================================*/
-
 $(".eliminarFoto").click(function () {
-
     if ($(".eliminarFoto").length == 1) {
-
         $("#lightbox").css({ "height": "100px" });
-
     }
 
     idGaleria = $(this).parent().attr("id");
@@ -135,7 +131,6 @@ $(".eliminarFoto").click(function () {
     borrarItem.append("rutaGaleria", rutaGaleria);
 
     $.ajax({
-
         url: "views/ajax/gestorGaleria.php",
         method: "POST",
         data: borrarItem,
@@ -153,8 +148,6 @@ $(".eliminarFoto").click(function () {
 /*=============================================
 Ordenar Item Galería
 =============================================*/
-
-
 var almacenarOrdenId = [];
 var ordenItem = [];
 
@@ -171,12 +164,9 @@ $("#ordenarGaleria").click(function () {
         connectWith: ".bloqueGaleria",
         handle: ".handleImg",
         stop: function (event) {
-
             for (var i = 0; i < $("#lightbox li").length; i++) {
-
                 almacenarOrdenId[i] = event.target.children[i].id;
                 ordenItem[i] = i + 1;
-
             }
 
         }
@@ -197,7 +187,6 @@ $("#guardarGaleria").click(function () {
         actualizarOrden.append("actualizarOrdenItem", ordenItem[i]);
 
         $.ajax({
-
             url: "views/ajax/gestorGaleria.php",
             method: "POST",
             data: actualizarOrden,
@@ -205,24 +194,22 @@ $("#guardarGaleria").click(function () {
             contentType: false,
             processData: false,
             success: function (respuesta) {
-
                 $("#lightbox").html(respuesta);
 
                 swal({
-                    title: "¡OK!",
-                    text: "¡El orden se ha actualizado correctamente!",
+                    title: "Listo!",
+                    text: "¡Orden actualizado correctamente!",
                     type: "success",
                     confirmButtonText: "Cerrar",
                     closeOnConfirm: false
                 },
-                    function (isConfirm) {
+                function (isConfirm) {
                         if (isConfirm) {
                             window.location = "galeria";
                         }
-                    });
+                });
 
             }
-
 
         })
 

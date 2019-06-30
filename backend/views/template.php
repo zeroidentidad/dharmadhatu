@@ -53,6 +53,7 @@
 	<script src="views/js/validarIngreso.js?v=<?php echo rand(); ?>"></script>
 	<script src="views/js/gestorSlide.js?v=<?php echo rand(); ?>"></script>
 	<script src="views/js/gestorArticulos.js?v=<?php echo rand(); ?>"></script>
+	<script src="views/js/gestorGaleria.js?v=<?php echo rand(); ?>"></script>
 	
 </body>
 

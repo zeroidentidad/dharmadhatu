@@ -3,11 +3,9 @@
 session_start();
 
 if(!$_SESSION["validar"]){
-
 	header("location:ingreso");
 
 	exit();
-
 }
 
 include "views/modules/botonera.php";
@@ -22,67 +20,21 @@ GALERIA ADMINISTRABLE
 
 <hr>
 
-<p><span class="fa fa-arrow-down"></span>  Arrastra aquí tu imagen, tamaño recomendado: 1600px * 600px</p>
+<p><span class="fa fa-arrow-down"></span>Arrastra aquí tu imagen (tamaño recomendado: 1024px * 768px, peso permitido: 2Mb)</p>
 	
 	<ul id="lightbox">
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo01.jpg">
-			<img src="views/images/galeria/photo01.jpg">
-			</a>
-		</li>
-			
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo02.jpg">
-			<img src="views/images/galeria/photo02.jpg">
-			</a>		
-		</li>
+		<?php
 
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo03.jpg">
-			<img src="views/images/galeria/photo03.jpg">
-			</a>		
-		</li>
+		$galeria = new GestorGaleria();
+		$galeria -> mostrarImagenVistaController();
 
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo04.jpg">
-			<img src="views/images/galeria/photo04.jpg">
-			</a>		
-		</li>
-
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo01.jpg">
-			<img src="views/images/galeria/photo01.jpg">
-			</a>
-		</li>
-			
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo02.jpg">
-			<img src="views/images/galeria/photo02.jpg">
-			</a>		
-		</li>
-
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo03.jpg">
-			<img src="views/images/galeria/photo03.jpg">
-			</a>		
-		</li>
-
-		<li>
-			<span class="fa fa-times"></span>
-			<a rel="grupo" href="images/galeria/photo04.jpg">
-			<img src="views/images/galeria/photo04.jpg">
-			</a>		
-		</li>
+		?>
 	</ul>
 
-	<button class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar Imágenes</button>
+	<button id="ordenarGaleria" class="btn btn-warning pull-right" style="margin:10px 30px">Ordenar</button>
+
+	<button id="guardarGaleria" class="btn btn-primary pull-right" style="margin:10px 30px; display:none">Guardar</button>
+
 
 </div>
 

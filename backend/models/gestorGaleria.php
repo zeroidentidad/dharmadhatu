@@ -8,7 +8,8 @@ class GestorGaleriaModel{
 	#------------------------------------------------------------
 	public function subirImagenGaleriaModel($datos, $tabla){
 
-		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (ruta) VALUES (:ruta)");
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("INSERT INTO $tabla (ruta) VALUES (:ruta)");
 
 		$stmt -> bindParam(":ruta", $datos, PDO::PARAM_STR);
 
@@ -26,7 +27,8 @@ class GestorGaleriaModel{
 	#------------------------------------------------------------
 	public function mostrarImagenGaleriaModel($datos, $tabla){
 
-		$stmt = Conexion::conectar()->prepare("SELECT ruta FROM $tabla WHERE ruta = :ruta");
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("SELECT ruta FROM $tabla WHERE ruta = :ruta");
 
 		$stmt -> bindParam(":ruta", $datos, PDO::PARAM_STR);
 
@@ -41,7 +43,8 @@ class GestorGaleriaModel{
 	#---------------------------------------------------------
 	public function mostrarImagenVistaModel($tabla){
 
-		$stmt = Conexion::conectar()->prepare("SELECT id, ruta FROM $tabla ORDER BY orden ASC");
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("SELECT id, ruta FROM $tabla ORDER BY orden ASC");
 
 		$stmt -> execute();
 
@@ -55,7 +58,8 @@ class GestorGaleriaModel{
 
 	public function eliminarGaleriaModel($datos, $tabla){
 
-		$stmt = Conexion::conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("DELETE FROM $tabla WHERE id = :id");
 
 		$stmt -> bindParam(":id", $datos["idGaleria"], PDO::PARAM_INT);
 
@@ -74,7 +78,8 @@ class GestorGaleriaModel{
 
 	public function actualizarOrdenModel($datos, $tabla){
 
-		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET orden = :orden WHERE id = :id");
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("UPDATE $tabla SET orden = :orden WHERE id = :id");
 
 		$stmt -> bindParam(":orden", $datos["ordenItem"], PDO::PARAM_INT);
 		$stmt -> bindParam(":id", $datos["ordenGaleria"], PDO::PARAM_INT);
@@ -94,7 +99,8 @@ class GestorGaleriaModel{
 
 	public function seleccionarOrdenModel($tabla){
 
-		$stmt = Conexion::conectar()->prepare("SELECT id, ruta FROM $tabla ORDER BY orden ASC");
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("SELECT id, ruta FROM $tabla ORDER BY orden ASC");
 
 		$stmt -> execute();
 

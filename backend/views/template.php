@@ -54,6 +54,7 @@
 	<script src="views/js/gestorSlide.js?v=<?php echo rand(); ?>"></script>
 	<script src="views/js/gestorArticulos.js?v=<?php echo rand(); ?>"></script>
 	<script src="views/js/gestorGaleria.js?v=<?php echo rand(); ?>"></script>
+	<script src="views/js/gestorVideos.js?v=<?php echo rand(); ?>"></script>
 	
 </body>
 

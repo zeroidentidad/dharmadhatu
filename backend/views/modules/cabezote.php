@@ -8,14 +8,14 @@
 		
 		<ul>
 			<li style="background: #333">
-				<a href="mensajes.html" style="color: #fff">
+				<a href="mensajes" style="color: #fff">
       			<i class="fa fa-envelope"></i> 
       			<!--<span>0</span>--> 
     			</a>
 			</li>
 
 			<li  style="background: #333">
-				<a href="suscriptores.html" style="color: #fff">
+				<a href="suscriptores" style="color: #fff">
       			<i class="fa fa-bell"></i>  
       			<!--<span>0</span>--> 
     			</a>

@@ -1,14 +1,13 @@
 <footer class="row" id="contactenos">
 
 	<hr>
-	
 	<h1 class="text-center text-info"><b>CONTACTO</b></h1>
-
 	<hr>
 	
 	<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 	
-		<iframe src="https://maps.google.com/maps?q=Tabasco%2C%20Mexico&t=&z=5&ie=UTF8&iwloc=&output=embed" width="100%"  frameborder="0" style="border:0" allowfullscreen></iframe>
+		<iframe src="https://maps.google.com/maps?q=Tabasco%2C%20Mexico&t=&z=5&ie=UTF8&iwloc=&output=embed" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+		<!--<iframe width="700" height="440" src="https://maps.google.com/maps?width=700&amp;height=440&amp;hl=en&amp;q=Cunduac%C3%A1n%2C%20Tabasco+(T%C3%ADtulo)&amp;ie=UTF8&amp;t=&amp;z=9&amp;iwloc=B&amp;output=embed" width="100%" frameborder="0" style="border:0" allowfullscreen></iframe>-->
 
 		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 jumbotron">
 
@@ -20,7 +19,7 @@
 	          	</ul>      
     		</h4>
 
-			</div>
+		</div>
 
 	</div>
 
@@ -44,19 +43,18 @@
           		<i class="fa fa-twitter" style="font-size:24px;"></i>  
         		</a>
     		</li>
-			</ol>
+		</ol>
 
-			<form>
-			    <input type="text" class="form-control"  placeholder="Nombre">
+			<form method="post" onsubmit="return validarMensaje()">
+			    <input type="text" class="form-control"  placeholder="Nombre" id="nombre" name="nombre" required>
 
-			    <input type="email" class="form-control" placeholder="Email">
+			    <input type="email" class="form-control" placeholder="Email" id="email" name="email">
 
-			    <textarea name="" id="" cols="30" rows="5" placeholder="Contenido del Mensaje" class="form-control"></textarea>
+			    <textarea name="mensaje" id="mensaje" cols="30" rows="5" placeholder="Contenido del Mensaje" class="form-control"></textarea>
 
 			 
-			  	<input type="button" class="btn btn-default" value="Enviar">
-		</form>
-						
+			  	<input type="submit" class="btn btn-default" value="Enviar">
+			</form>		
 
 	</div>
 

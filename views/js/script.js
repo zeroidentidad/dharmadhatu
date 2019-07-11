@@ -142,3 +142,46 @@ $.scrollUp({
 });
 
 /*=====  Fin de SCROLL   ======*/
+
+/*=============================================
+VALIDAR MENSAJES
+=============================================*/
+
+function validarMensaje() {
+
+	nombre = $("#nombre").val();
+	mensaje = $("#mensaje").val();
+
+	if (nombre != "") {
+
+		var caracteres = nombre.length;
+		var expresion = /^[a-zA-Z\s]*$/; // \s = espacios en blanco
+
+		if (!expresion.test(nombre)) {
+
+			$("#nombre").after('<div class="alert alert-warning">No se permiten números ni caracteres especiales.</div>');
+
+			return false;
+		}
+
+	}
+
+	else if (mensaje != "") {
+
+		var caracteres = mensaje.length;
+		var expresion = /^[a-zA-Z0-9\s]*$/;
+
+		if (!expresion.test(mensaje)) {
+
+			$("#mensaje").after('<div class="alert alert-warning">No se permiten caracteres especiales.</div>');
+
+			return false;
+
+		}
+
+
+	}
+
+	return true;
+
+}

@@ -54,7 +54,12 @@
 
 			 
 			  	<input type="submit" class="btn btn-default" value="Enviar">
-			</form>		
+			</form>
+
+		<?php
+			$mensajes = new MensajesController();
+			$mensajes -> registroMensajesController();
+		?>		
 
 	</div>
 

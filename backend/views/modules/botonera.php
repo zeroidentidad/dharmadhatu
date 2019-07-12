@@ -29,25 +29,24 @@ COLUMNA BOTONERA
 		<nav id="botonera" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 collapse navbar-collapse text-center">
 					
 			<ul class="nav navbar">
-
+				<hr>
 				<li><a href="inicio">Inicio <span class="glyphicon glyphicon-new-window"></span></a></li>
-				<br/>
+				<hr>
 				<li><a href="slide">Slide <span class="glyphicon glyphicon-new-window"></span></a></li>
-				<br/>
+				<hr>
 				<li><a href="articulos">Artículos <span class="glyphicon glyphicon-new-window"></span></a></li>
-				<br/>
+				<hr>
 				<li><a href="galeria">Imágenes <span class="glyphicon glyphicon-new-window"></span></a></li>
-				<br/>
+				<hr>
 				<li><a href="videos">Videos <span class="glyphicon glyphicon-new-window"></span></a></li>
-				<br/>
+				<hr>
 				<li><a href="suscriptores">Suscriptores <span class="glyphicon glyphicon-new-window"></span></a></li>
-
+				<hr>
 			</ul>
-
+			<div class="text-center">
+			<a href="../index.php" target="_blank"><button type="button" class="btn btn-primary">Ver sitio</button></a>
+			</div>
 		</nav>
-		<div class="text-center">
-		<a href="../index.php" target="_blank"><button type="button" class="btn btn-primary">Ver sitio</button></a>
-		</div>
 	</div>
 
 <!--====  FIn de COLUMNA BOTONERA  ====-->

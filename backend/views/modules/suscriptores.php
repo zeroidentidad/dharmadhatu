@@ -1,23 +1,17 @@
 <?php
-
 session_start();
 
 if(!$_SESSION["validar"]){
-
   header("location:ingreso");
-
   exit();
-
 }
 
 include "views/modules/botonera.php";
 include "views/modules/cabezote.php";
-
 ?>
 <!--=====================================
 SUSCRIPTORES         
 ======================================-->
-
 <div id="suscriptores" class="col-lg-10 col-md-10 col-sm-9 col-xs-12">
  
  <div>
@@ -25,60 +19,26 @@ SUSCRIPTORES
 	<table id="tablaSuscriptores" class="table table-striped dt-responsive nowrap">
     <thead>
       <tr>
-        <th>Usuario</th>
-        <th>Contraseña</th>
+        <th>Nombre</th>
         <th>Email</th>
         <th>Acciones</th>
         <th></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td><span class="btn btn-danger fa fa-times quitarSuscriptor"></span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-        <td><span class="btn btn-danger fa fa-times quitarSuscriptor"></span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td><span class="btn btn-danger fa fa-times quitarSuscriptor"></span></td>
-        <td></td>
-      </tr>
-        <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-        <td><span class="btn btn-danger fa fa-times quitarSuscriptor"></span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-        <td><span class="btn btn-danger fa fa-times quitarSuscriptor"></span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-        <td><span class="btn btn-danger fa fa-times quitarSuscriptor"></span></td>
-        <td></td>
-      </tr>
+
+      <?php
+      $suscriptores = new SuscriptoresController();
+      $suscriptores -> mostrarSuscriptoresController();
+      $suscriptores -> borrarSuscriptoresController();
+      ?>
+
     </tbody>
   </table>
 
+  <a href="tcpdf/pdf/suscriptores.php" target="blank">
   <button class="btn btn-warning pull-right" style="margin:20px;">Imprimir Suscriptores</button>
+  </a>
   </div>
 
 </div>

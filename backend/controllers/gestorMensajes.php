@@ -66,7 +66,7 @@ class MensajesController{
 			$mensaje =$_POST['enviarMensaje'];
 
 			$para = $email . ', ';
-			$para .= 'jafs_92@yahoo.com';
+			$para .= 'jafs_92@yahoo.com.mx';
 			$título = 'Respuesta a su mensaje';
 			$mensaje ='<html>
 							<head>
@@ -78,7 +78,7 @@ class MensajesController{
 								<hr>
 								<p><b>Admin website.</b><br>
 								Cunduacán, Tabasco</br>
-								jafs_92@yahoo.com</p>
+								jafs_92@yahoo.com.mx</p>
 
 								<h3><a href="http://softcun.co.nf" target="blank">softcun.co.nf</a></h3>
 
@@ -92,7 +92,7 @@ class MensajesController{
 
 		   $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 		   $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-		   $cabeceras .= 'From: <jafs_92@yahoo.com>' . "\r\n";
+		   $cabeceras .= 'From: <jafs_92@yahoo.com.mx>' . "\r\n";
 
 		   $envio = mail($para, $título, $mensaje, $cabeceras);
 
@@ -140,7 +140,7 @@ class MensajesController{
 									<hr>
 									<p><b>Admin website.</b><br>
 									Cunduacán, Tabasco</br>
-									jafs_92@yahoo.com</p>
+									jafs_92@yahoo.com.mx</p>
 
 									<h3><a href="http://softcun.co.nf" target="blank">softcun.co.nf</a></h3>
 
@@ -154,7 +154,7 @@ class MensajesController{
 
 			   $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
 			   $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
-			   $cabeceras .= 'From: <jafs_92@yahoo.com>' . "\r\n";
+			   $cabeceras .= 'From: <jafs_92@yahoo.com.mx>' . "\r\n";
 
 			   $envio = mail($para, $título, $mensaje, $cabeceras);
 

@@ -13,7 +13,7 @@ class MensajesController{
 			   	#ENVIAR EL CORREO ELECTRÓNICO
 			   	#------------------------------------------------------
 			   	#mail(Correo destino, asunto del mensaje, mensaje, cabecera del correo);
-				$correoDestino = "jafs_92@yahoo.com";
+				$correoDestino = "jafs_92@yahoo.com.mx";
 				$asunto = "Mensaje del website";
 				$mensaje = "Nombre: ".$_POST["nombre"]."\n"."\n".
 						   "Email: ".$_POST["email"]."\n"."\n".

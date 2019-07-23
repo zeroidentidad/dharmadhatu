@@ -10,7 +10,10 @@
 			<li style="background: #333">
 				<a href="mensajes" style="color: #fff">
       			<i class="fa fa-envelope"></i> 
-      			<!--<span>0</span>--> 
+				<?php
+      				$revisarMensajes = new MensajesController();
+      				$revisarMensajes -> mensajesSinRevisarController();				
+				?>
     			</a>
 			</li>
 
@@ -25,8 +28,78 @@
 	</div>
 
 	<div id="time" class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-		<div class="text-center">Lunes, 12 de Enero de 2019</div>
-		<div class="text-center">12:56:00 pm</div>
+		<div class="text-center">
+		<?php
+			switch(date("l")){
+		    	case "Monday":
+				$dia = "Lunes";		
+				break;
+				case "Tuesday":
+				$dia = "Martes";		
+				break;
+				case "Wednesday":
+				$dia = "Miércoles";
+				break;
+				case "Thursday":
+				$dia = "Jueves";
+				break;
+				case "Friday":
+				$dia = "Viernes";
+				break;
+				case "Saturday":
+				$dia = "Sábado";
+				break;
+				case "Sunday":
+				$dia = "Domingo";
+				break;
+			}
+			switch(date("F")){
+				case "January":
+				$mes = "Enero";
+				break;
+				case "February":
+				$mes = "Febrero";
+				break;
+				case "March":
+				$mes = "Marzo";
+				break;
+				case "April":
+				$mes = "Abril";
+				break;
+				case "May":
+				$mes = "Mayo";
+				break;
+				case "June":
+				$mes = "Junio";
+				break;
+				case "July":
+				$mes = "Julio";
+				break;
+				case "August":
+				$mes = "Agosto";
+				break;
+				case "September":
+				$mes = "Septiembre";
+				break;
+				case "October":
+				$mes = "Octubre";
+				break;
+				case "November":
+				$mes = "Noviembre";
+				break;
+				case "December":
+				$mes = "Diciembre";
+				break;	
+			}
+			echo $dia.", ".date("d")." de ".$mes." de ".date("Y");
+		?>
+		</div>
+		<div class="text-center">
+		<?php
+			date_default_timezone_set("America/Mexico_City");
+			echo '<div id="hora" hora="'.date("h").'" minutos="'.date("i").'"  segundos="'.date("s").'" meridiano="'.date("a").'"></div>';
+		?>
+		</div>
 	</div>
 
 	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-right">
@@ -46,3 +119,34 @@
 </div>
 
 <!--====  Fin de CABEZOTE  ====-->
+
+<script>
+/*=============================================
+RELOJ DINÁMICO        
+=============================================*/
+function reloj(){
+	hora = $("#hora").attr("hora");
+	minutos = $("#hora").attr("minutos");
+	segundos = $("#hora").attr("segundos");
+	meridiano = $("#hora").attr("meridiano");
+	
+	setInterval(function(){
+		if(segundos == 59){
+			segundos = "0" + 0;
+			minutos = Number(minutos) + 1;
+		}
+		else{
+			segundos++;
+			if(segundos > 0 && segundos < 10){
+				segundos = "0" + segundos++;
+			}
+		}
+		if(minutos > 59){
+			window.location.reload();
+		}
+		$("#hora").html(hora+":"+minutos+":"+segundos+" "+meridiano)
+	},1000);
+
+}
+reloj();
+</script>

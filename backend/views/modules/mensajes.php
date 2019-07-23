@@ -47,3 +47,20 @@ MENSAJES
 </div>
 
 <!--====  Fin de MENSAJES  ====-->
+
+<script>
+$(window).load(function(){
+	var datos = new FormData();
+	datos.append("revisionMensajes", 1);
+	$.ajax({
+			url:"views/ajax/gestorRevision.php",
+			method: "POST",
+			data: datos,
+			cache: false,
+			contentType: false,
+			processData: false,
+			success: function(respuesta){}
+		});
+})
+
+</script>

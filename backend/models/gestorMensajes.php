@@ -48,4 +48,38 @@ class MensajesModel{
 		$stmt -> close();
 	}
 
+	#SELECCIONAR MENSAJES SIN REVISAR
+	#------------------------------------------------------------
+	public function mensajesSinRevisarModel($tabla){
+
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("SELECT revision FROM $tabla");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchAll();
+
+		$stmt -> close();
+
+	}
+	
+	#MENSAJES REVISADOS
+	#------------------------------------------------------------
+	public function mensajesRevisadosModel($datosModel, $tabla){
+
+		$obj = new Conexion();
+		$stmt = $obj->conectar()->prepare("UPDATE $tabla SET revision = :revision");
+
+		$stmt->bindParam(":revision", $datosModel, PDO::PARAM_INT);
+
+		if($stmt->execute()){
+			return "ok";
+		}
+		else{
+			return "error";
+		}
+
+		$stmt->close();
+	}	
+
 }

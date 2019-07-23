@@ -181,4 +181,39 @@ class MensajesController{
 
 	}
 
+	#MENSAJES SIN REVISAR
+	#------------------------------------------------------------
+	public function mensajesSinRevisarController(){
+
+		$obj = new MensajesModel();
+		$respuesta = $obj->mensajesSinRevisarModel("mensajes");
+
+		$sumaRevision = 0;
+
+		foreach ($respuesta as $row => $item) {
+
+			if($item["revision"] == 0){
+
+				++$sumaRevision;
+
+				echo '<span>'.$sumaRevision.'</span>';
+			
+			}
+
+		}
+
+	}
+
+	#MENSAJES REVISADOS
+	#------------------------------------------------------------
+	public function mensajesRevisadosController($datos){
+
+		$datosController = $datos;
+
+		$obj = new MensajesModel();
+		$respuesta = $obj->mensajesRevisadosModel($datosController, "mensajes");
+
+		echo $respuesta;
+	}	
+
 }

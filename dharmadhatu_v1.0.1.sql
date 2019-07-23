@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 11-07-2019 a las 23:09:55
+-- Tiempo de generación: 23-07-2019 a las 09:37:08
 -- Versión del servidor: 5.7.23
 -- Versión de PHP: 7.0.31
 
@@ -89,16 +89,17 @@ CREATE TABLE `mensajes` (
   `nombre` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `email` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `mensaje` text COLLATE utf8_spanish_ci,
-  `fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `fecha` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `revision` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `mensajes`
 --
 
-INSERT INTO `mensajes` (`id`, `nombre`, `email`, `mensaje`, `fecha`) VALUES
-(9, 'test', 'test@mail.com', 'mensaje de preuiba', '2019-07-12 00:39:46'),
-(10, 'oyttro', 'otro@mail.com', 'mesnaje otroe de preuba', '2019-07-12 00:41:16');
+INSERT INTO `mensajes` (`id`, `nombre`, `email`, `mensaje`, `fecha`, `revision`) VALUES
+(9, 'test', 'test@mail.com', 'mensaje de preuiba', '2019-07-12 00:39:46', 1),
+(10, 'oyttro', 'otro@mail.com', 'mesnaje otroe de preuba', '2019-07-12 00:41:16', 1);
 
 -- --------------------------------------------------------
 

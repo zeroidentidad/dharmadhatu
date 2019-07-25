@@ -20,7 +20,10 @@
 			<li  style="background: #333">
 				<a href="suscriptores" style="color: #fff">
       			<i class="fa fa-bell"></i>  
-      			<!--<span>0</span>--> 
+      			<?php
+				  $revisarSuscriptores = new SuscriptoresController();
+				  $revisarSuscriptores -> suscriptoresSinRevisarController();
+				?>
     			</a>
 			</li>			
 		</ul>

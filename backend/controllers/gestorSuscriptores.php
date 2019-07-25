@@ -66,4 +66,32 @@ class SuscriptoresController{
 		return $respuesta;
 	}
 
+	#SUSCRIPTORES SIN REVISAR
+	#------------------------------------------------------------
+	public function suscriptoresSinRevisarController(){
+
+		$obj = new SuscriptoresModel();
+		$respuesta = $obj->suscriptoresSinRevisarModel("suscriptores");
+
+		$sumaRevision = 0;
+
+		foreach ($respuesta as $row => $item) {
+			if($item["revision"] == 0){
+				++$sumaRevision;
+				echo '<span>'.$sumaRevision.'</span>';
+			}					
+		}
+
+	}
+
+	#SUSCRIPTORES REVISADOS
+	#------------------------------------------------------------
+	public function suscriptoresRevisadosController($datos){
+
+		$datosController = $datos;
+		$obj = new SuscriptoresModel();
+		$respuesta = $obj->suscriptoresRevisadosModel($datosController, "suscriptores");
+		echo $respuesta;
+	}	
+
 }

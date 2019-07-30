@@ -56,6 +56,7 @@
 	<script src="views/js/gestorGaleria.js?v=<?php echo rand(); ?>"></script>
 	<script src="views/js/gestorVideos.js?v=<?php echo rand(); ?>"></script>
 	<script src="views/js/gestorMensajes.js?v=<?php echo rand(); ?>"></script>
+	<script src="views/js/gestorPerfiles.js?v=<?php echo rand(); ?>"></script>
 	
 </body>
 

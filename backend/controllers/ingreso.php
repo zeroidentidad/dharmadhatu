@@ -11,10 +11,10 @@ class Ingreso{
 			if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["usuarioIngreso"])&&
 			   preg_match('/^[a-zA-Z0-9]+$/', $_POST["passwordIngreso"])){
 
-			   	#$encriptar = crypt($_POST["passwordIngreso"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
+			$encriptar = crypt($_POST["passwordIngreso"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
 				$datosController = array("usuario"=>$_POST["usuarioIngreso"],
-				                     "password"=>$_POST["passwordIngreso"]);
+				                     "password"=>$encriptar);
 
 				$respuesta = $obj->ingresoModel($datosController, "usuarios");
 
@@ -24,7 +24,7 @@ class Ingreso{
 
 				if($intentos < $maximoIntentos){
 
-					if($respuesta["usuario"] == $_POST["usuarioIngreso"] && $respuesta["password"] == $_POST["passwordIngreso"]){
+					if($respuesta["usuario"] == $_POST["usuarioIngreso"] && $respuesta["password"] == $encriptar){
 
 						$intentos = 0;
 
@@ -36,6 +36,11 @@ class Ingreso{
 
 						$_SESSION["validar"] = true;
 						$_SESSION["usuario"] = $respuesta["usuario"];
+						$_SESSION["id"] = $respuesta["id"];
+						$_SESSION["password"] = $respuesta["password"];
+						$_SESSION["email"] = $respuesta["email"];
+						$_SESSION["photo"] = $respuesta["photo"];
+						$_SESSION["rol"] = $respuesta["rol"];
 
 						header("location:inicio");
 					}

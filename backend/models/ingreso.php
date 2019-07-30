@@ -8,7 +8,7 @@ class IngresoModels{
 
 		$obj = new Conexion();
 
-		$stmt = $obj->conectar()->prepare("SELECT usuario, password, intentos FROM $tabla WHERE usuario = :usuario");
+		$stmt = $obj->conectar()->prepare("SELECT id, usuario, password, email, photo, rol, intentos FROM $tabla WHERE usuario = :usuario");
 
 		$stmt -> bindParam(":usuario", $datosModel["usuario"], PDO::PARAM_STR);
 		

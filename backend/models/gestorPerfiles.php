@@ -22,6 +22,7 @@ class GestorPerfilesModel{
 		}
 		else{
 			return "error";
+			print_r($stmt->errorInfo());
 		}
 		$stmt->close();
 	}
@@ -31,7 +32,7 @@ class GestorPerfilesModel{
 	public function verPerfilesModel($tabla){
 
 		$obj = new Conexion();
-		$stmt = $obj->conectar()->prepare("SELECT id, usuario, password,  email, rol, photo FROM $tabla");
+		$stmt = $obj->conectar()->prepare("SELECT id, usuario, password, email, rol, photo FROM $tabla");
 
 		$stmt -> execute();
 

@@ -1,18 +1,13 @@
 <?php
-
 session_start();
 
 if(!$_SESSION["validar"]){
-
 	header("location:ingreso");
-
 	exit();
-
 }
 
 include "views/modules/botonera.php";
 include "views/modules/cabezote.php";
-
 ?>
 
 <!--=====================================
@@ -65,6 +60,9 @@ INICIO
 			</a>
 		</li>
 
+		<?php 
+	  	if($_SESSION["rol"] == 0){
+		echo '
 		<li class="botonesInicio">
 			<a href="suscriptores">
 			<div style="background:#770b1d">
@@ -72,8 +70,9 @@ INICIO
 			<p>SUSCRIPTORES</p>
 			</div>
 			</a>
-		</li>
-
+		</li>';
+		}
+		?>
 	</ul>
 	</div>
 

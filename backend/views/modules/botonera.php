@@ -40,8 +40,13 @@ COLUMNA BOTONERA
 				<hr>
 				<li><a href="videos">Videos <span class="glyphicon glyphicon-new-window"></span></a></li>
 				<hr>
+				<?php 
+	  			if($_SESSION["rol"] == 0){
+				echo '
 				<li><a href="suscriptores">Suscriptores <span class="glyphicon glyphicon-new-window"></span></a></li>
-				<hr>
+				<hr>';
+				}
+				?>
 			</ul>
 			<div class="text-center">
 			<a href="../index.php" target="_blank"><button type="button" class="btn btn-primary">Ver sitio</button></a>
